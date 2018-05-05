@@ -2,6 +2,7 @@ class Grid:
 
     def __init__(self):
         self.size = 9
+        self.section = 3
         self.grid = [[0 for x in range(9)]for y in range(9)] # create empty 2d array for grid.
 
     def print_grid(self):
@@ -21,3 +22,6 @@ class Grid:
 
     def get_size(self):
         return self.size
+        
+    def get_section()
+        return section
