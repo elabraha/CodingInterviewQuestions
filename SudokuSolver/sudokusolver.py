@@ -21,7 +21,6 @@ def main():
     grid.assign_grid(arr)
     grid.print_grid()
     solve_grid(grid)
-    grid.print_grid()
 
 if __name__ == "__main__":
     main()

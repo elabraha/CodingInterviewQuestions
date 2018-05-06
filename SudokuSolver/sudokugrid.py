@@ -22,6 +22,6 @@ class Grid:
 
     def get_size(self):
         return self.size
-        
-    def get_section()
-        return section
+
+    def get_section(self):
+        return self.section
