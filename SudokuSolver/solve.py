@@ -45,7 +45,7 @@ def find_next_empty(grid, size, row, col):
     # return if there are no empty cells
     return (-1, -1)
 
-# recursive solution
+# Recursive solution to sudoku solver
 
 def recursive_solve_helper(grid, size, row=0, col=0):
     row, col = find_next_empty(grid, size, row, col)
@@ -66,15 +66,13 @@ def recursive_solve_helper(grid, size, row=0, col=0):
 def solve_grid_recursively(grid):
     size = grid.get_size()
     if recursive_solve_helper(grid, size):
-        return
+        return True
     else:
         print("can not solve this sudoku")
-        return
+        return False
 
 # I decided to do this iteritivly too because I wanted to see if I really
-# understood this. I also have a recursive implementation
-
-# still has an infinite loop fix later or take out
+# understood this.
 
 def solve_grid(grid):
     size = grid.get_size()
@@ -83,27 +81,37 @@ def solve_grid(grid):
     stack = list()
     # find the next empty spot
     curr_row, curr_col = find_next_empty(grid, size, curr_row, curr_col)
+    # start value for checking values 1 through 9 in the first empty cell
+    start = 1
     # enter while loop on condition that there are still empty spots.
     while curr_row != -1 and curr_col != -1:
         # make an assignment
         valid = False
-        for value in range(1, 10):
+        # checking values 1 through 9 in the first empty cell
+        for value in range(start, 10):
             # if a valid placement was made
             valid = valid_placement(grid, curr_row, curr_col, value, size)
             if valid:
                 # make the assignment and append to the stack
                 grid.set_value_by_location(curr_row, curr_col, value)
                 stack.append((curr_row, curr_col))
+                # find the next empty spot
+                curr_row, curr_col = find_next_empty(grid, size, curr_row, curr_col)
+                # start the cell value range at 1 again because we are going to the next empty cell
+                start = 1
                 break
         if not valid:
-            print("trigger backtrace")
-            rm_row, rm_col = stack.pop()
-            grid.set_value_by_location(rm_row, rm_col, 0)
-            curr_col = rm_col
-            curr_row = rm_row
-        # find the next empty spot
-        # print(curr_col, curr_row)
-        curr_row, curr_col = find_next_empty(grid, size, curr_row, curr_col)
+            # no valid assignment was found for current cell so we enter this if statement
+            # check if the current cell is the first cell. 
+            if curr_row == 0 and curr_col == 0:
+                # if it is than no solution can be found.
+                # this is never true. if valid a solution will will always be found.
+                print("there is no solution to this puzzle.")
+                return False
+            curr_row, curr_col = stack.pop()
+            start = grid.get_value_by_location(curr_row, curr_col) + 1
+            grid.set_value_by_location(curr_row, curr_col, 0)
+    return True
 
 def check_solution(grid):
     # I wrote this to check if a solution was valid.

@@ -5,6 +5,10 @@
 from sudokugrid import Grid
 from solve import solve_grid_recursively, check_solution, solve_grid
 
+# I will ad a method for taking in user input at some point.
+# I havent decided how exactly I want users to enter data.
+# batch file? indivodually? both?
+
 def main():
     # testing solution in main
 
@@ -27,6 +31,15 @@ def main():
             [0, 5, 0, 0, 0, 9, 0, 0, 0],
             [0, 0, 0, 2, 0, 0, 9, 0, 7],
             [6, 4, 0, 3, 0, 0, 0, 0, 0]]
+    # arr = [[0,1,9,6,0,0,3,0,0],
+    #         [0,5,0,2,7,4,0,0,1],
+    #         [2,0,6,0,3,0,5,7,0],
+    #         [0,8,0,0,2,0,6,9,0],
+    #         [0,7,4,5,0,1,8,0,3],
+    #         [9,0,0,7,0,6,0,0,5],
+    #         [5,9,0,8,4,0,2,3,0],
+    #         [4,0,7,0,0,5,1,0,9],
+    #         [0,0,8,9,1,0,7,0,0]]
 
     # first grid solve
     print("Grid 1:\n")
@@ -34,35 +47,40 @@ def main():
     grid.assign_grid(arr)
     print("Unsolved: ")
     grid.print_grid()
-    print("\nSolved: ")
-    solve_grid_recursively(grid)
-    grid.print_grid()
-    print('\n')
+    print()
     if check_solution(grid):
-        print("Valid Solution!")
+        print("This unfinished or finished grid is a valid grid.")
     else:
-        print("Solution is not Valid!")
+        print("This unfinished or finished grid is not a valid grid.")
+    print("\nSolved: ")
+    if solve_grid_recursively(grid):
+        grid.print_grid()
+        print('\n')
+        if check_solution(grid):
+            print("Valid Solution!")
+        else:
+            print("Solution is not Valid!")
 
     # test 2:
-    arr2 = [[0,1,9,6,0,0,3,4,2],
-            [8,5,3,2,7,4,9,0,1],
-            [2,0,6,0,3,0,5,7,8],
-            [0,8,0,0,2,0,6,9,0],
-            [0,7,4,5,9,1,8,2,3],
-            [9,0,0,7,0,6,0,1,5],
-            [5,9,1,8,4,0,2,3,0],
-            [4,2,7,0,0,5,1,0,9],
-            [0,0,8,9,1,0,7,5,4]]
+    # arr2 = [[0,1,9,6,0,0,3,0,0],
+    #         [0,5,0,2,7,4,0,0,1],
+    #         [2,0,6,0,3,0,5,7,0],
+    #         [0,8,0,0,2,0,6,9,0],
+    #         [0,7,4,5,0,1,8,0,3],
+    #         [9,0,0,7,0,6,0,0,5],
+    #         [5,9,0,8,4,0,2,3,0],
+    #         [4,0,7,0,0,5,1,0,9],
+    #         [0,0,8,9,1,0,7,0,0]]
 
-    # arr2 = [[3,0,6,5,0,8,4,0,0],
-    #         [5,2,0,0,0,0,0,0,0],
-    #         [0,8,7,0,0,0,0,3,1],
-    #         [0,0,3,0,1,0,0,8,0],
-    #         [9,0,0,8,6,3,0,0,5],
-    #         [0,5,0,0,9,0,6,0,0],
-    #         [1,3,0,0,0,0,2,5,0],
-    #         [0,0,0,0,0,0,0,7,4],
-    #         [0,0,5,2,0,6,3,0,0]]
+    arr2 = [[3,0,6,5,0,8,4,0,0],
+            [5,2,0,0,0,0,0,0,0],
+            [0,8,7,0,0,0,0,3,1],
+            [0,0,3,0,1,0,0,8,0],
+            [9,0,0,8,6,3,0,0,5],
+            [0,5,0,0,9,0,6,0,0],
+            [1,3,0,0,0,0,2,5,0],
+            [0,0,0,0,0,0,0,7,4],
+            [0,0,5,2,0,6,3,0,0]]
 
     # second grid solve
     print("\nGrid 2:\n")
@@ -70,14 +88,19 @@ def main():
     grid2.assign_grid(arr2)
     print("Unsolved: ")
     grid2.print_grid()
-    solve_grid(grid2)
-    print("\nSolved: ")
-    grid2.print_grid()
-    print('\n')
+    print()
     if check_solution(grid2):
-        print("Valid Solution!")
+        print("This unfinished or finished grid is a valid grid.")
     else:
-        print("Solution is not Valid!")
+        print("This unfinished or finished grid is not a valid grid.")
+    if solve_grid(grid2):
+        print("\nSolved: ")
+        grid2.print_grid()
+        print('\n')
+        if check_solution(grid2):
+            print("Valid Solution!")
+        else:
+            print("Solution is not Valid!")
 
 
 if __name__ == "__main__":
