@@ -16,4 +16,4 @@ ___
 > There is a much better explanation about my solution in the comments of my code. I explain each line step by step.
 
 ####### 2
-> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will. <
+> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will.
