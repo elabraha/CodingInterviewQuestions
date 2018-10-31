@@ -11,7 +11,8 @@ ___
         1. Recursivly (outlined in the links above). 
         2. Iterativly which I sort of converted from my recursive solution using the idea that you can use a stack to make a recursive algorithm into an iterative one. The main differences are: A while loop with the base case (in the recursive solution) as a condition, a stack append replaced the recursive call, and a step to check for a valid placement that replaces the backtracking trigger in the recursive solution (checking if the recursive call returned true from the previous call).<sup>[[2]](#2)</sup>
     - I wrote my sudoku checker in a very weird way because I orginally wrote it for a daily codefights challange (or maybe it was for leetcode?). The question used strings instead of numbers for the cells. Anyway the solve is rediculous and uses a list of dictionaries. The dictionary is being used more like a set. The point is that, insted of iterating to check if number has been used in a section, I accumulate them in the dictionaries (sets) as I check so as not to check the whole section if the cells are empty.
-#### 3. In the next few days I might start writing my code interview questions from my code interview question book in other languages. The list of languages I want to learn is currently way too long hahaha. But here it is:
+#### 3. I want to do a write up of a topological sort problem.
+#### 4. In the next few days I might start writing my code interview questions from my code interview question book in other languages. The list of languages I want to learn is currently way too long hahaha. But here it is:
     1) Haskell, 2) Erlang, 3) Go, 4) Ruby, 5) Get better at javascript (Typscript, Coffeescript), 6) Write more Java code, 7) Kotlin, 8) Dart (Flutter), 9) Haskell, 5) Elixer, etc., etc. 
 
 ###### 1
