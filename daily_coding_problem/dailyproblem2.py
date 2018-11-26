@@ -41,6 +41,7 @@ def product_list_no_division(nums):
             if x!= i:
                 new_arr[i] *= n
     return new_arr
+
 def main():
     nums = [1, 2, 3, 4, 5]
     comp = [120, 60, 40, 30, 24]
