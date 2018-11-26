@@ -4,13 +4,27 @@
 # Bonus: Can you do this in one pass?
 
 def add_to_k(nums, k):
-    diffs = {}
+    diffs = set()
     for n in nums:
         diff = k - n
-
+        if n in diffs:
+            return True
+        else:
+            diffs.add(diff)
+    return False
 def main():
     # call my function
-    nums = [10, 15, 3, 7]
+    nums = [10, 15, 3, 7] # only exists one
+    nums = [9, 15, 4, 6] # exists none
+    nums = [7, 2, 1, 10] # in a different order
+    nums = [10, 15, 2, 7] # more than one
+    nums = [] # empty
+    nums = [15, 2] # only 2 nums and both add to k
+    nums = [18, -1, 1, 14] # negative numbers
     k = 17
-    add_t_k(nums, k)
+    print(nums)
+    if add_to_k(nums, k):
+        print("Yayyy! There is exists 2 numbers that add to", k)
+    else:
+        print("NOOOOOOO!! There aren't any numbers in the list that add to", k)
 main()
