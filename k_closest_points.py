@@ -2,7 +2,7 @@ import math
 import sys
 # Find k closest points to the origin
 
-#points are a list of tuples
+# points are a list of tuples
 
 # let's say all points are closer to the origin than sys.maxint
 
