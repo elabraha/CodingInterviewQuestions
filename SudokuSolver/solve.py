@@ -56,7 +56,14 @@ def placed_value_remove(grid, row, col, size):
         rowsCheck[row].remove(val)
         columnsCheck[col].remove(val)
         sectionsCheck[row // grid.get_section()][col // grid.get_section()].remove(val)
-        
+
+def check_possibilities(grid, row, col, size):
+    val = grid.get_val
+
+def find_cell_with_possibibities_remaining_1_or_2(grid, size):
+    for i in range(size):
+        for j in range(size):
+            if  
 
 def recursive_solve_helper(grid, size, row=0, col=0):
 
