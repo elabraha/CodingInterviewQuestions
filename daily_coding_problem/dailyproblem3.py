@@ -13,8 +13,8 @@
 # node = Node('root', Node('left', Node('left.left')), Node('right'))
 # assert deserialize(serialize(node)).left.left.val == 'left.left'
 
-# I needed help wit this oneself.
 # Need to work on binary trees and recursion
+
 class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
