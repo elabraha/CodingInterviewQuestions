@@ -68,6 +68,8 @@ def floor_egg_break(floors):
             drop_point = j - 1
             break
     return drop_point
+    # Ugh another arithmatic sum series thing n^2 - n all over 2 equals 100.
+    # solve for n. n is 13 plus some fraction.
 
 def main():
     floors = [False for _ in range(0, 48)] # at floor 48 if we are starting at 1
