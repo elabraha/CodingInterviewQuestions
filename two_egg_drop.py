@@ -49,7 +49,7 @@ def floor_egg_break(floors):
     # end. I feel like I thought that but since I increased the size of the
     # jumps that would be better but it's not becuase than you have to check
     # in between the jumps in floors. I was dumb and didn't think to only have
-    # a high number in the beginning. I I just did trial and error to see where
+    # a high number in the beginning. I just did trial and error to see where
     # I should start in terms of the number from 10+9+8+7... Then tried 11,
     # 12, 13
 
