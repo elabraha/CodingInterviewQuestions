@@ -21,22 +21,30 @@ class Node:
         self.left = left
         self.right = right
 
-def count_trees(node, counter=0):
-    if node == None:
-        return counter
-    if (node.left == None and node.right == None):
-        counter+=1
-    elif (node.left == None and node.right != None:
-        if node.right.data == node.data:
-            counter+=1
-    elif (node.right == None and node.left != None):
-        if node.left.data == node.data:
-            counter+=1
-    left = count_trees(node.left, counter)
-    right = count_trees(node.right, counter)
+# I did not do a very good job.
+# I really need to get better at recursion and binary trees.
+
+def count_trees(node, c):
+    if node is None:
+        return True
+    left = count_trees(node.left, c)
+    right = count_trees(node.right, c)
+    if left == False or right == False:
+        return False
+    if node.left and node.right:
+        if node.left.val != node.val:
+            return False
+    if node.right and node.left:
+        if node.right.val != node.val:
+            return False
+    c[0]+=1
+    return True
+
 
 def main():
+    counter = [0]
     root = Node(0, Node(1), Node(0, Node(1, Node(1), Node(1)), Node(0)))
-    print(count_trees(root))
+    count_trees(root, counter)
+    print(counter[0])
 
 main()
