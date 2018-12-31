@@ -31,10 +31,10 @@ def count_trees(node, c):
     right = count_trees(node.right, c)
     if left == False or right == False:
         return False
-    if node.left and node.right:
+    if node.left:
         if node.left.val != node.val:
             return False
-    if node.right and node.left:
+    if node.right:
         if node.right.val != node.val:
             return False
     c[0]+=1
@@ -44,6 +44,7 @@ def count_trees(node, c):
 def main():
     counter = [0]
     root = Node(0, Node(1), Node(0, Node(1, Node(1), Node(1)), Node(0)))
+    root = Node(5, Node(1, Node(1), Node(1)), Node(3, Node(1)))
     count_trees(root, counter)
     print(counter[0])
 
