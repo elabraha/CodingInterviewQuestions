@@ -16,6 +16,7 @@ ___
 #### 5. I want to do a write up of a topological sort problem.
 #### 6. In the next few days I might start writing my code interview questions from my code interview question book in other languages. The list of languages I want to learn is currently way too long hahaha. But here it is:
     1) Haskell, 2) Erlang, 3) Go, 4) Ruby, 5) Get better at javascript (Typscript, Coffeescript), 6) Write more Java code, 7) Kotlin, 8) Dart (Flutter), 9) Haskell, 5) Elixer, etc., etc. 
+#### 7. Write-up for egg drop coming soon.
 
 ###### 1
 > There is a much better explanation about my solution in the comments of my code. I explain each line step by step.
