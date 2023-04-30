@@ -17,7 +17,7 @@ ___
 #### 6. Write-up for egg drop coming soon.
 
 ##### [1](#one)
-> There is a much better explanation about my solution in the comments of my code. I explain each line step by step. [1](#one)
+> There is a much better explanation about my solution in the comments of my code. I explain each line step by step.
 
 ##### [2](#two)
-> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will. [2](#two)
+> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will.
