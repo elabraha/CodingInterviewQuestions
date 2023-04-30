@@ -16,8 +16,8 @@ ___
 #### 5. I want to do a write up of a topological sort problem.
 #### 6. Write-up for egg drop coming soon.
 
-##### 1 [link] (#one)
-> There is a much better explanation about my solution in the comments of my code. I explain each line step by step.
+##### 1
+> There is a much better explanation about my solution in the comments of my code. I explain each line step by step. [1] (#one)
 
-##### 2 [link] (#two)
-> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will.
+##### 2
+> If none of this makes any sense I assure you that, if you read about backtracking and/or look at my solution while you read this, it will. [2] (#two)
